@@ -45,6 +45,7 @@
 
     <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-500">
+        <!-- Desktop Header Row -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="text-2xl font-extrabold text-primary-color flex items-center">
@@ -72,11 +73,22 @@
                     Get Started
                 </a>
 
-                <!-- Mobile Menu Icon (Placeholder) -->
-                <button class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
+                <!-- Mobile Menu Icon (Toggles the menu below) -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Hidden by default, shown when toggled) -->
+        <div id="mobile-menu-content" class="hidden md:hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+            <nav class="pt-2 pb-3 space-y-1">
+                <a href="#solutions" class="block py-2 px-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-color transition duration-200" data-menu-item>Solutions</a>
+                <a href="#features" class="block py-2 px-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-color transition duration-200" data-menu-item>Key Features</a>
+                <a href="#contact" class="block py-2 px-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-color transition duration-200" data-menu-item>Contact</a>
+                <!-- Mobile CTA Button -->
+                <a href="#contact" class="block text-center py-2 px-3 rounded-md text-base font-medium text-white bg-primary-color mt-2 hover:bg-indigo-700 transition duration-200" data-menu-item>Get Started</a>
+            </nav>
         </div>
     </header>
 
@@ -274,8 +286,34 @@
                 });
             }
 
-            // 4. Simple smooth scrolling for internal links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            // --- MOBILE MENU LOGIC ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuContent = document.getElementById('mobile-menu-content');
+            const mobileMenuItems = mobileMenuContent.querySelectorAll('[data-menu-item]');
+
+            if (mobileMenuButton && mobileMenuContent) {
+                // Toggle the 'hidden' class on the menu content when the button is clicked
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenuContent.classList.toggle('hidden');
+                });
+
+                // Close menu when a navigation link is clicked (better mobile UX)
+                mobileMenuItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        // Ensure it scrolls smoothly before closing
+                        const href = item.getAttribute('href');
+                        if (href && href.startsWith('#')) {
+                             document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                        }
+                        // Close the menu
+                        mobileMenuContent.classList.add('hidden');
+                    });
+                });
+            }
+            // --- END MOBILE MENU LOGIC ---
+
+            // 4. Simple smooth scrolling for internal links (Only needed for desktop links, mobile links handled above)
+            document.querySelectorAll('nav:not(#mobile-menu-content) a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -283,8 +321,6 @@
                     });
                 });
             });
-
-            // 5. Removed form submission handler as the form was removed.
         });
     </script>
 </body>
