@@ -32,8 +32,9 @@
                     colors: {
                         // Light Mode Colors (default)
                         'primary-color': '#4f46e5', // Indigo 600
-                        'accent-color': '#a78bfa',  // Violet 400
-                        // Dark mode colors for utilities are set by Tailwind's dark: prefix
+                        // --- ACCENT COLOR CHANGE HERE ---
+                        'accent-color': '#2dd4bf',  // New: Teal 400 (Vibrant in light mode)
+                        // Dark mode color is set using the standard 'dark:' prefix in the HTML, e.g., dark:text-yellow-400
                     },
                 }
             }
@@ -49,7 +50,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="text-2xl font-extrabold text-primary-color flex items-center">
-                <i data-lucide="phone-call" class="w-6 h-6 mr-2 text-accent-color"></i>
+                <!-- LOGO ICON COLOR UPDATED -->
+                <i data-lucide="phone-call" class="w-6 h-6 mr-2 text-accent-color dark:text-yellow-400"></i>
                 Centric-<span class="text-gray-900 dark:text-gray-100">CX</span>
             </a>
             
@@ -98,7 +100,7 @@
         <section id="hero" class="bg-primary-color text-white py-20 sm:py-32 rounded-b-xl shadow-inner">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
-                    Open-Source CX Solutions for <span class="text-accent-color">Modern Call Centers</span>
+                    Open-Source CX Solutions for <span class="text-accent-color dark:text-yellow-400">Modern Call Centers</span>
                 </h1>
                 <p class="text-xl sm:text-2xl mb-8 font-light max-w-3xl mx-auto">
                     Future-proof your customer experience with flexible, scalable, and fully integrated open-source call center and VoIP systems.
@@ -113,7 +115,8 @@
         <section id="solutions" class="py-16 sm:py-24 bg-white dark:bg-gray-900 transition-colors duration-500">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <span class="text-accent-color uppercase text-sm font-semibold tracking-widest">Our Expertise</span>
+                    <!-- TEXT COLOR UPDATED -->
+                    <span class="text-accent-color dark:text-yellow-400 uppercase text-sm font-semibold tracking-widest">Our Expertise</span>
                     <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100">
                         Comprehensive CX & Call Center Offerings
                     </h2>
@@ -122,7 +125,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
                     <!-- Solution Card 1: Open Call Center System -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="headset" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Open Call Center System</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -131,7 +134,7 @@
                     </div>
 
                     <!-- Solution Card 2: Autodialer & Campaign Management -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="megaphone" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Autodialer & Campaign Management</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -140,7 +143,7 @@
                     </div>
 
                     <!-- Solution Card 3: Ticketing System -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="ticket" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Integrated Ticketing System</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -151,7 +154,7 @@
 
                 <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
                     <!-- Solution Card 4: CRM & ERP Integration -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="link" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Seamless CRM & ERP Integration</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -160,7 +163,7 @@
                     </div>
 
                     <!-- Solution Card 5: Custom Development & VoIP -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="code" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Custom VoIP & Development</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -176,7 +179,8 @@
         <section id="features" class="py-16 sm:py-24 bg-gray-100 dark:bg-gray-800 transition-colors duration-500">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <span class="text-accent-color uppercase text-sm font-semibold tracking-widest">Why Centric-CX?</span>
+                    <!-- TEXT COLOR UPDATED -->
+                    <span class="text-accent-color dark:text-yellow-400 uppercase text-sm font-semibold tracking-widest">Why Centric-CX?</span>
                     <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100">
                         The Power of Open-Source, Enterprise-Grade Service
                     </h2>
@@ -214,9 +218,9 @@
                     For inquiries, project consultations, or sales questions, please reach out to our team directly via email.
                 </p>
                 
-                <!-- Direct Email Link -->
+                <!-- CTA BUTTON COLORS UPDATED -->
                 <a href="mailto:sales@centric-cx.com?subject=Inquiry%20about%20CX%20Solutions"
-                   class="inline-block bg-accent-color text-white py-4 px-10 rounded-xl text-xl font-bold shadow-2xl hover:bg-violet-600 transition duration-300 transform hover:scale-105 border-2 border-white">
+                   class="inline-block bg-accent-color dark:bg-yellow-400 text-white dark:text-gray-900 py-4 px-10 rounded-xl text-xl font-bold shadow-2xl hover:bg-teal-600 dark:hover:bg-yellow-500 transition duration-300 transform hover:scale-105 border-2 border-white dark:border-gray-900">
                     <i data-lucide="mail" class="w-6 h-6 inline-block mr-2 -mt-1"></i>
                     Email Our Sales Team: sales@centric-cx.com
                 </a>
