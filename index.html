@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centric-CX | Open Call Center & CX Solutions</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons --><script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Custom styles for the Inter font and smooth transitions */
         body {
@@ -41,63 +39,56 @@
         }
     </script>
 </head>
-<!-- Apply base background and text colors, which are overridden in dark mode -->
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+<!-- Apply base background and text colors, which are overridden in dark mode --><body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
 
-    <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-500">
-        <!-- Desktop Header Row -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-extrabold text-primary-color flex items-center">
-                <!-- LOGO ICON COLOR UPDATED -->
-                <i data-lucide="phone-call" class="w-6 h-6 mr-2 text-accent-color dark:text-yellow-400"></i>
-                Centric-<span class="text-gray-900 dark:text-gray-100">CX</span>
+    <!-- Header & Navigation --><header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-500">
+        <!-- Desktop Header Row --><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo (UPDATED: Larger image and text, added dash, matched font style, removed hover scale) --><a href="#" class="flex items-center group">
+                <!-- Image logo size increased to h-16 (mobile) / h-20 (desktop) --><img 
+                    src="https://raw.githubusercontent.com/abduuu/centric-cx/refs/heads/main/asset/logo.png?text=Centric+CX" 
+                    alt="Centric-CX Company Logo" 
+                    class="h-16 sm:h-20 mr-3 rounded-lg transition-transform duration-300">
+                    
+                <!-- Text size increased and font-serif added --><span class="text-5xl sm:text-6xl font-extrabold tracking-tight font-serif">
+                    <span class="text-gray-900 dark:text-gray-100 transition-colors duration-300">Centric</span>
+                    <span class="text-primary-color dark:text-accent-color transition-colors duration-300">- CX</span>
+                </span>
             </a>
             
-            <!-- Navigation, Toggle Button, and CTA -->
-            <div class="flex items-center space-x-4">
-                <!-- Simple Desktop Navigation (Hidden on Mobile) -->
-                <nav class="hidden md:flex space-x-8">
+            <!-- Navigation, Toggle Button, and CTA --><div class="flex items-center space-x-4">
+                <!-- Simple Desktop Navigation (Hidden on Mobile) --><nav class="hidden md:flex space-x-8">
                     <a href="#solutions" class="text-gray-600 dark:text-gray-300 hover:text-primary-color transition duration-200 font-medium">Solutions</a>
                     <a href="#features" class="text-gray-600 dark:text-gray-300 hover:text-primary-color transition duration-200 font-medium">Key Features</a>
                     <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-primary-color transition duration-200 font-medium">Contact</a>
                 </nav>
 
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:ring-2 hover:ring-primary-color transition duration-300 focus:outline-none">
+                <!-- Theme Toggle Button (FIXED SIZE and alignment added to ensure circular shape) --><button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:ring-2 hover:ring-primary-color transition duration-300 focus:outline-none">
                     <i data-lucide="moon" id="moon-icon" class="w-5 h-5 dark:block hidden"></i>
                     <i data-lucide="sun" id="sun-icon" class="w-5 h-5 dark:hidden block"></i>
                 </button>
 
-                <!-- CTA Button (Updated to link to contact section for consistency) -->
-                <a href="#contact" class="hidden md:inline-block bg-primary-color text-white py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 font-semibold">
+                <!-- CTA Button (Updated to link to contact section for consistency) --><a href="#contact" class="hidden md:inline-block bg-primary-color text-white py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 font-semibold">
                     Get Started
                 </a>
 
-                <!-- Mobile Menu Icon (Toggles the menu below) -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
+                <!-- Mobile Menu Icon (Toggles the menu below) --><button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel (Hidden by default, shown when toggled) -->
-        <div id="mobile-menu-content" class="hidden md:hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <!-- Mobile Menu Panel (Hidden by default, shown when toggled) --><div id="mobile-menu-content" class="hidden md:hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
             <nav class="pt-2 pb-3 space-y-1">
                 <a href="#solutions" class="block py-2 px-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-color transition duration-200" data-menu-item>Solutions</a>
                 <a href="#features" class="block py-2 px-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-color transition duration-200" data-menu-item>Key Features</a>
                 <a href="#contact" class="block py-2 px-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary-color transition duration-200" data-menu-item>Contact</a>
-                <!-- Mobile CTA Button -->
-                <a href="#contact" class="block text-center py-2 px-3 rounded-md text-base font-medium text-white bg-primary-color mt-2 hover:bg-indigo-700 transition duration-200" data-menu-item>Get Started</a>
+                <!-- Mobile CTA Button --><a href="#contact" class="block text-center py-2 px-3 rounded-md text-base font-medium text-white bg-primary-color mt-2 hover:bg-indigo-700 transition duration-200" data-menu-item>Get Started</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <!-- Note: Fixed background colors for contrast in the Hero, using the custom colors -->
-        <section id="hero" class="bg-primary-color text-white py-20 sm:py-32 rounded-b-xl shadow-inner">
+        <!-- Hero Section --><!-- Note: Fixed background colors for contrast in the Hero, using the custom colors --><section id="hero" class="bg-primary-color text-white py-20 sm:py-32 rounded-b-xl shadow-inner">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
                     Open-Source CX Solutions for <span class="text-accent-color dark:text-yellow-400">Modern Call Centers</span>
@@ -111,12 +102,10 @@
             </div>
         </section>
 
-        <!-- Solutions Overview Section -->
-        <section id="solutions" class="py-16 sm:py-24 bg-white dark:bg-gray-900 transition-colors duration-500">
+        <!-- Solutions Overview Section --><section id="solutions" class="py-16 sm:py-24 bg-white dark:bg-gray-900 transition-colors duration-500">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <!-- TEXT COLOR UPDATED -->
-                    <span class="text-accent-color dark:text-yellow-400 uppercase text-sm font-semibold tracking-widest">Our Expertise</span>
+                    <!-- TEXT COLOR UPDATED --><span class="text-accent-color dark:text-yellow-400 uppercase text-sm font-semibold tracking-widest">Our Expertise</span>
                     <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100">
                         Comprehensive CX & Call Center Offerings
                     </h2>
@@ -124,17 +113,15 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                    <!-- Solution Card 1: Open Call Center System -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
+                    <!-- Solution Card 1: Open Call Center System --><div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="headset" class="w-10 h-10 text-primary-color mb-4"></i>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Open Call Center System</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Open Call Center System </h3>
                         <p class="text-gray-600 dark:text-gray-300">
                             Robust, scalable, and customizable call center platforms built on open-source technology, giving you full control and zero licensing fees.
                         </p>
                     </div>
 
-                    <!-- Solution Card 2: Autodialer & Campaign Management -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
+                    <!-- Solution Card 2: Autodialer & Campaign Management --><div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="megaphone" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Autodialer & Campaign Management</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -142,8 +129,7 @@
                         </p>
                     </div>
 
-                    <!-- Solution Card 3: Ticketing System -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
+                    <!-- Solution Card 3: Ticketing System --><div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="ticket" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Integrated Ticketing System</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -153,8 +139,7 @@
                 </div>
 
                 <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <!-- Solution Card 4: CRM & ERP Integration -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
+                    <!-- Solution Card 4: CRM & ERP Integration --><div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="link" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Seamless CRM & ERP Integration</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -162,8 +147,7 @@
                         </p>
                     </div>
 
-                    <!-- Solution Card 5: Custom Development & VoIP -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
+                    <!-- Solution Card 5: Custom Development & VoIP --><div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 icon-hover-effect border-b-4 border-accent-color dark:border-yellow-400">
                         <i data-lucide="code" class="w-10 h-10 text-primary-color mb-4"></i>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">Custom VoIP & Development</h3>
                         <p class="text-gray-600 dark:text-gray-300">
@@ -175,31 +159,26 @@
             </div>
         </section>
 
-        <!-- Key Features Section (The Value Proposition) -->
-        <section id="features" class="py-16 sm:py-24 bg-gray-100 dark:bg-gray-800 transition-colors duration-500">
+        <!-- Key Features Section (The Value Proposition) --><section id="features" class="py-16 sm:py-24 bg-gray-100 dark:bg-gray-800 transition-colors duration-500">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <!-- TEXT COLOR UPDATED -->
-                    <span class="text-accent-color dark:text-yellow-400 uppercase text-sm font-semibold tracking-widest">Why Centric-CX?</span>
+                    <!-- TEXT COLOR UPDATED --><span class="text-accent-color dark:text-yellow-400 uppercase text-sm font-semibold tracking-widest">Why Centric-CX?</span>
                     <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100">
                         The Power of Open-Source, Enterprise-Grade Service
                     </h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Feature Card 1 -->
-                    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md border-t-4 border-primary-color">
+                    <!-- Feature Card 1 --><div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md border-t-4 border-primary-color">
                         <i data-lucide="maximize" class="w-8 h-8 text-primary-color mb-4"></i>
                         <h4 class="font-bold text-lg mb-2 text-gray-900 dark:text-gray-100">Unmatched Scalability</h4>
                         <p class="text-gray-600 dark:text-gray-300">Scale from 10 to 10,000 agents without proprietary hardware lock-in or escalating license costs.</p>
                     </div>
-                    <!-- Feature Card 2 -->
-                    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md border-t-4 border-primary-color">
+                    <!-- Feature Card 2 --><div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md border-t-4 border-primary-color">
                         <i data-lucide="shield-check" class="w-8 h-8 text-primary-color mb-4"></i>
                         <h4 class="font-bold text-lg mb-2 text-gray-900 dark:text-gray-100">Total Control & Security</h4>
                         <p class="text-gray-600 dark:text-gray-300">Maintain full ownership over your data and infrastructure with enhanced security configurations.</p>
                     </div>
-                    <!-- Feature Card 3 -->
-                    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md border-t-4 border-primary-color">
+                    <!-- Feature Card 3 --><div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md border-t-4 border-primary-color">
                         <i data-lucide="dollar-sign" class="w-8 h-8 text-primary-color mb-4"></i>
                         <h4 class="font-bold text-lg mb-2 text-gray-900 dark:text-gray-100">Cost Efficiency</h4>
                         <p class="text-gray-600 dark:text-gray-300">Leverage powerful open-source tools to significantly reduce your total cost of ownership (TCO).</p>
@@ -208,8 +187,7 @@
             </div>
         </section>
 
-        <!-- Contact/CTA Section -->
-        <section id="contact" class="py-16 sm:py-24 bg-primary-color rounded-t-xl">
+        <!-- Contact/CTA Section --><section id="contact" class="py-16 sm:py-24 bg-primary-color rounded-t-xl">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
                 <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
                     Ready to Transform Your Customer Experience?
@@ -218,9 +196,8 @@
                     For inquiries, project consultations, or sales questions, please reach out to our team directly via email.
                 </p>
                 
-                <!-- CTA BUTTON COLORS UPDATED -->
-                <a href="mailto:sales@centric-cx.com?subject=Inquiry%20about%20CX%20Solutions"
-                   class="inline-block bg-accent-color dark:bg-yellow-400 text-white dark:text-gray-900 py-4 px-10 rounded-xl text-xl font-bold shadow-2xl hover:bg-teal-600 dark:hover:bg-yellow-500 transition duration-300 transform hover:scale-105 border-2 border-white dark:border-gray-900">
+                <!-- CTA BUTTON COLORS UPDATED --><a href="mailto:sales@centric-cx.com?subject=Inquiry%20about%20CX%20Solutions"
+                    class="inline-block bg-accent-color dark:bg-yellow-400 text-white dark:text-gray-900 py-4 px-10 rounded-xl text-xl font-bold shadow-2xl hover:bg-teal-600 dark:hover:bg-yellow-500 transition duration-300 transform hover:scale-105 border-2 border-white dark:border-gray-900">
                     <i data-lucide="mail" class="w-6 h-6 inline-block mr-2 -mt-1"></i>
                     Email Our Sales Team: sales@centric-cx.com
                 </a>
@@ -232,8 +209,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 transition-colors duration-500">
+    <!-- Footer --><footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 transition-colors duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
             <p class="text-sm">&copy; 2025 Centric-CX. All rights reserved. | Powered by Open Source.</p>
             <div class="flex justify-center space-x-4 mt-4 sm:mt-0">
