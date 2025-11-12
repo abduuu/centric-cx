@@ -33,11 +33,24 @@
         .carousel-container {
             overflow: hidden;
         }
+
+
+
         .carousel-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            height: 36rem; /* INCREASED HEIGHT for large slides */
+            /* NEW: Smaller default height for mobile */
+            height: 20rem; 
         }
+        /* Media Query to restore height for tablet and desktop */
+        @media (min-width: 768px) {
+            .carousel-track {
+                height: 36rem; 
+            }
+        }
+
+
+        
         .carousel-slide {
             flex: 0 0 100%; /* Each slide takes up full width */
             width: 100%;
